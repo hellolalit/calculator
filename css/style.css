@@ -44,9 +44,10 @@ h1 {
 }
 
 #display {
-    width: 14.5rem;
+    width: 15rem;
     height: 3rem;
-    /* border: 1.8px solid rgb(255, 181, 9); */
+    border: 1.8px solid whitesmoke;
+    background: transparent;
     border: none;
     border-radius: 5px;
     margin-top: -5px !important;
@@ -64,12 +65,39 @@ h1 {
 } */
 
 button {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    margin: 5px;
+    width: 3.2rem;
+    height: 3.2rem;
+    border: 2px solid whitesmoke;
+    margin: 7px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
 }
 
 button:hover {
-    background-color: lightgray;
+    /* background-color: blue; */
+    transform: translateY(-3px);
+    transition: all ease 0.3s;
+}
+
+button:active {
+    transform: scale(0.92);
+    /* Scaling button to 0.98 to its original size */
+}
+
+.btnac-color:hover {
+    background: red;
+    border: 2px solid red;
+}
+
+.btnlength {
+    min-width: 7.5rem !important;
+}
+
+.btnlength:hover {
+    border: 2px solid rgb(4, 190, 4);
+    background: rgb(4, 190, 4);
+    /* transform: none !important; */
 }

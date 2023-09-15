@@ -1,33 +1,49 @@
 "use strict";
 
-var display = document.getElementById("display");
-var buttons = document.getElementById("buttons");
+const display = document.getElementById("display");
 
-var operator = "";
-var number1 = "";
-var number2 = "";
+function handleNumberClick(number) {
+    display.value += number;
+}
 
-function buttonClick(event) {
-    var button = event.target;
-    var text = button.textContent;
+function handleDecimal() {
+    display.value += ".";
+}
 
-    if (text == "Clear") {
-        display.textContent = "";
-        operator = "";
-        number1 = "";
-        number2 = "";
-    } else if (text == "=") {
-        var result = eval(number1 + operator + number2);
-        display.textContent = result;
-    } else {
-        if (operator == "") {
-            number1 = number1 + text;
-        } else {
-            number2 = number2 + text;
-        }
+function handleOperatorClick(operator) {
+    display.value += operator;
+}
+
+function handleEqual() {
+    var currentExpression = display.value;
+
+    // Evaluate the current expression.
+    var result = eval(currentExpression);
+
+    // Set the display to the result.
+    display.value = result;
+}
+
+document.addEventListener("click", function (event) {
+    var target = event.target;
+
+    // Handle number buttons.
+    if (target.classList.contains("btn-number")) {
+        handleNumberClick(target.textContent);
     }
-}
 
-for (var i = 0; i < buttons.children.length; i++) {
-    buttons.children[i].addEventListener("click", buttonClick);
-}
+    // Handle decimal button.
+    else if (target.classList.contains("btn-decimal")) {
+        handleDecimal();
+    }
+
+    // Handle operator buttons.
+    else if (target.classList.contains("btn-operator")) {
+        handleOperatorClick(target.textContent);
+    }
+
+    // Handle equal button.
+    else if (target.classList.contains("btn-equal")) {
+        handleEqual();
+    }
+});
