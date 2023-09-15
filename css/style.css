@@ -1,32 +1,64 @@
+@import url(https://fonts.bunny.net/css?family=poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900);
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.cal-container {
-    width: 100px;
-    margin: 1rem auto;
+body {
+    font-family: sans-serif;
 }
 
 h1 {
     text-align: center;
 }
 
-input {
+.body-containerr {
+    border: 4px solid grey;
     display: flex;
-    width: 40%;
-    height: 30px;
-    padding: 0.5rem;
-    border: 2px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.9rem;
+    height: 95vh;
+    background: linear-gradient(100deg, rgba(37, 138, 252, 0.100) 27.64%, rgba(136, 91, 255, 0.100) 43.42%, rgba(213, 23, 247, 0.100) 58.83%, rgba(246, 173, 109, 0.100) 81.81%);
 }
 
-button {
-    width: 100px;
-    height: 30px;
-    background-color: #0a5bb1;
-    color: white;
-    border: none;
+.cal-container {
+    height: 70vh;
+    width: 50vh;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#display {
+    width: 20rem;
+    height: 4rem;
+    border: 1.8px solid rgb(255, 181, 9);
     border-radius: 5px;
+    /* margin: 10px; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* #buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px !important;
+} */
+
+button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: lightgray;
 }

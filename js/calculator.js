@@ -1,36 +1,33 @@
 "use strict";
 
 var display = document.getElementById("display");
-var clearButton = document.getElementById("clear");
-var addButton = document.getElementById("add");
-var subtractButton = document.getElementById("subtract");
-var multiplyButton = document.getElementById("multiply");
-var divideButton = document.getElementById("divide");
+var buttons = document.getElementById("buttons");
 
-clearButton.addEventListener("click", function () {
-    display.value = "";
-});
+var operator = "";
+var number1 = "";
+var number2 = "";
 
-addButton.addEventListener("click", function () {
-    var firstNumber = parseFloat(display.value);
-    var secondNumber = parseFloat(prompt("Enter the second number:"));
-    display.value = firstNumber + secondNumber;
-});
+function buttonClick(event) {
+    var button = event.target;
+    var text = button.textContent;
 
-subtractButton.addEventListener("click", function () {
-    var firstNumber = parseFloat(display.value);
-    var secondNumber = parseFloat(prompt("Enter the second number:"));
-    display.value = firstNumber - secondNumber;
-});
+    if (text == "Clear") {
+        display.textContent = "";
+        operator = "";
+        number1 = "";
+        number2 = "";
+    } else if (text == "=") {
+        var result = eval(number1 + operator + number2);
+        display.textContent = result;
+    } else {
+        if (operator == "") {
+            number1 = number1 + text;
+        } else {
+            number2 = number2 + text;
+        }
+    }
+}
 
-multiplyButton.addEventListener("click", function () {
-    var firstNumber = parseFloat(display.value);
-    var secondNumber = parseFloat(prompt("Enter the second number:"));
-    display.value = firstNumber * secondNumber;
-});
-
-divideButton.addEventListener("click", function () {
-    var firstNumber = parseFloat(display.value);
-    var secondNumber = parseFloat(prompt("Enter the second number:"));
-    display.value = firstNumber / secondNumber;
-});
+for (var i = 0; i < buttons.children.length; i++) {
+    buttons.children[i].addEventListener("click", buttonClick);
+}
