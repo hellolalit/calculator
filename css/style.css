@@ -15,32 +15,44 @@ h1 {
 }
 
 .body-containerr {
-    border: 4px solid grey;
+    /* border: 4px solid grey; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0.9rem;
-    height: 95vh;
+    padding: 0rem;
+    height: 99vh;
     background: linear-gradient(100deg, rgba(37, 138, 252, 0.100) 27.64%, rgba(136, 91, 255, 0.100) 43.42%, rgba(213, 23, 247, 0.100) 58.83%, rgba(246, 173, 109, 0.100) 81.81%);
 }
 
+.main-head {
+    font-size: 38px !important;
+    font-weight: 600 !important;
+}
+
 .cal-container {
-    height: 70vh;
-    width: 50vh;
-    border: 2px solid red;
+    min-height: 65vh;
+    min-width: 45vh;
+    /* border: 2px solid red; */
+    border-radius: 8px;
+    margin-top: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
 
 #display {
-    width: 20rem;
-    height: 4rem;
-    border: 1.8px solid rgb(255, 181, 9);
+    width: 15rem;
+    height: 3rem;
+    border: 1.8px solid whitesmoke;
+    background: transparent;
+    border: none;
     border-radius: 5px;
-    /* margin: 10px; */
+    margin-top: -5px !important;
+    margin-bottom: 27px;
+    padding: 0.5rem;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -53,12 +65,39 @@ h1 {
 } */
 
 button {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    margin: 5px;
+    width: 3.2rem;
+    height: 3.2rem;
+    border: 2px solid whitesmoke;
+    margin: 7px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
 }
 
 button:hover {
-    background-color: lightgray;
+    /* background-color: blue; */
+    transform: translateY(-3px);
+    transition: all ease 0.3s;
+}
+
+button:active {
+    transform: scale(0.92);
+    /* Scaling button to 0.98 to its original size */
+}
+
+.btnac-color:hover {
+    background: red;
+    border: 2px solid red;
+}
+
+.btnlength {
+    min-width: 7.5rem !important;
+}
+
+.btnlength:hover {
+    border: 2px solid rgb(4, 190, 4);
+    background: rgb(4, 190, 4);
+    /* transform: none !important; */
 }
