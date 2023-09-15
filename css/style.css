@@ -59,6 +59,9 @@ h1 {
     color: white;
     font-size: 30px;
     letter-spacing: 3px;
+    word-wrap: break-word;
+    word-break: break-all;
+    transition: all ease-out 0.4s;
 }
 
 /* #buttons {
