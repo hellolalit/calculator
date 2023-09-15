@@ -44,18 +44,21 @@ h1 {
 }
 
 #display {
-    width: 15rem;
+    width: 15.2rem;
     height: 3rem;
-    border: 1.8px solid whitesmoke;
-    background: transparent;
+    /* border: 0.5px solid whitesmoke !important; */
+    background: rgba(245, 245, 245, 0.13);
     border: none;
     border-radius: 5px;
-    margin-top: -5px !important;
-    margin-bottom: 27px;
+    margin-top: -2px !important;
+    margin-bottom: 18px;
     padding: 0.5rem;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: end !important;
+    justify-content: end !important;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 3px;
 }
 
 /* #buttons {
@@ -87,9 +90,14 @@ button:active {
     /* Scaling button to 0.98 to its original size */
 }
 
-.btnac-color:hover {
+.btnAc-color:hover {
     background: red;
     border: 2px solid red;
+}
+
+.btnDel-color:hover {
+    background: blue;
+    border: 2px solid blue;
 }
 
 .btnlength {
