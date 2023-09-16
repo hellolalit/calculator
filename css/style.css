@@ -147,8 +147,8 @@ button:active {
     }
 
     .cal-container {
-        min-height: 44vh !important;
-        min-width: 28vh !important;
+        min-height: 50vh !important;
+        min-width: 31vh !important;
     }
 
     #display {
