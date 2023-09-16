@@ -22,4 +22,5 @@
 // }
 // console.log(`Min value of arr2= ${min} and it's index is ${pos}`);
 
+alert('This calcualtor may not work best on your phone/table/Big Monitor. \n Please use 15" laptop for best experience !');
 
