@@ -112,3 +112,65 @@ button:active {
     background: rgb(4, 190, 4);
     /* transform: none !important; */
 }
+
+/* Media Quiries - */
+
+@media screen and (max-width: 1200px) {
+    body {
+        transition: all ease 0.4s !important;
+    }
+
+    .cal-container {
+        min-height: 46vh !important;
+        min-width: 31vh !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        transition: all ease 0.4s !important;
+    }
+
+    .cal-container {
+        min-height: 46vh !important;
+        min-width: 30vh !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        transition: all ease 0.4s !important;
+    }
+
+    .main-head {
+        font-size: 35px !important;
+    }
+
+    .cal-container {
+        min-height: 44vh !important;
+        min-width: 28vh !important;
+    }
+
+    #display {
+        width: 10.4rem;
+        height: 2rem;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    button {
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid whitesmoke;
+        margin: 7px;
+        font-size: 11.5px;
+        font-weight: 500;
+        border-radius: 8px;
+        background: transparent;
+        color: white;
+    }
+
+    .btnlength {
+        min-width: 5.2rem !important;
+    }
+}
