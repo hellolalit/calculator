@@ -56,6 +56,7 @@ h1 {
     display: flex;
     align-items: end !important;
     justify-content: end !important;
+    float: right !important;
     color: white;
     font-size: 30px;
     letter-spacing: 3px;
@@ -132,7 +133,7 @@ button:active {
     }
 
     .cal-container {
-        min-height: 46vh !important;
+        min-height: 45vh !important;
         min-width: 30vh !important;
     }
 }
@@ -172,5 +173,43 @@ button:active {
 
     .btnlength {
         min-width: 5.2rem !important;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    body {
+        transition: all ease 0.4s !important;
+    }
+
+    .main-head {
+        font-size: 17px !important;
+    }
+
+    .cal-container {
+        min-height: 36vh !important;
+        min-width: 22vh !important;
+    }
+
+    #display {
+        width: 6rem;
+        height: 1rem;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    button {
+        width: 1.4rem;
+        height: 1.4rem;
+        border: 2px solid whitesmoke;
+        margin: 1.8px;
+        font-size: 6px;
+        font-weight: 500;
+        border-radius: 8px;
+        background: transparent;
+        color: white;
+    }
+
+    .btnlength {
+        min-width: 3.3rem !important;
     }
 }
