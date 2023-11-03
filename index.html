@@ -19,13 +19,25 @@
 				<br />
 
 				<label>Select Operation= </label>
-				<input type="button" id="clear" value="" />
-				<button type="button" id="add" value="+">+</button>
-				<button type="button" id="subtract" value="-">-</button>
-				<button type="button" id="multiply" value="*">*</button>
-				<button type="button" id="divide" value="/">/</button>
+				<button type="button" id="clear" value="" onclick="calculate()">
+					Clear
+				</button>
+				<button type="button" id="add" value="+" onclick="calculate()">
+					+
+				</button>
+				<button type="button" id="subtract" value="-" onclick="calculate()">
+					-
+				</button>
+				<button type="button" id="multiply" value="*" onclick="calculate()">
+					*
+				</button>
+				<button type="button" id="divide" value="/" onclick="calculate()">
+					/
+				</button>
 				<br />
-				<button onclick="calculate()" id="submit-button">Submit</button>
+				<button onclick="calculate()" id="submit-button" class="submit-button">
+					Submit
+				</button>
 				<br />
 				<br />
 				<label>Output= </label>
