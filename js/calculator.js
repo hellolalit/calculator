@@ -1,36 +1,21 @@
 "use strict";
 
-var display = document.getElementById("display");
-var clearButton = document.getElementById("clear");
-var addButton = document.getElementById("add");
-var subtractButton = document.getElementById("subtract");
-var multiplyButton = document.getElementById("multiply");
-var divideButton = document.getElementById("divide");
+document.getElementById("user-input1").value = "";
+document.getElementById("user-input2").value = "";
 
-clearButton.addEventListener("click", function () {
-    display.value = "";
-});
+function calculate() {
+    let user_input1 = document.getElementById("user-input1").value;
+    let user_input2 = document.getElementById("user-input2").value;
+    console.log(`First User Input = ${user_input1}`);
+    console.log(`Second User Input = ${user_input2}`);
 
-addButton.addEventListener("click", function () {
-    var firstNumber = parseFloat(display.value);
-    var secondNumber = parseFloat(prompt("Enter the second number:"));
-    display.value = firstNumber + secondNumber;
-});
-
-subtractButton.addEventListener("click", function () {
-    var firstNumber = parseFloat(display.value);
-    var secondNumber = parseFloat(prompt("Enter the second number:"));
-    display.value = firstNumber - secondNumber;
-});
-
-multiplyButton.addEventListener("click", function () {
-    var firstNumber = parseFloat(display.value);
-    var secondNumber = parseFloat(prompt("Enter the second number:"));
-    display.value = firstNumber * secondNumber;
-});
-
-divideButton.addEventListener("click", function () {
-    var firstNumber = parseFloat(display.value);
-    var secondNumber = parseFloat(prompt("Enter the second number:"));
-    display.value = firstNumber / secondNumber;
-});
+    let clear_operation = document.getElementById("clear").value;
+    let add_operation = document.getElementById("add").value;
+    let sub_operation = document.getElementById("substract").value;
+    let div_operation = document.getElementById("divide").value;
+    let mul_operation = document.getElementById("multiply").value;
+    if (clear_operation == "") {
+        document.getElementById("user-input1").value = "";
+        document.getElementById("user-input2").value = "";
+    }
+}

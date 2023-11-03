@@ -12,13 +12,24 @@
 	<body>
 		<div class="container-fluid">
 			<div class="cal-continer">
-				<h1>Calculator</h1>
-				<input type="text" id="display" />
-				<button type="button" id="clear">Clear</button>
-				<button type="button" id="add">+</button>
-				<button type="button" id="subtract">-</button>
-				<button type="button" id="multiply">*</button>
-				<button type="button" id="divide">/</button>
+				<h1>Simple Calculator</h1>
+				<input type="text" placeholder="Enter 1st Number = " id="user-input1" />
+				<input type="text" placeholder="Enter 2nd Number = " id="user-input2" />
+
+				<br />
+
+				<label>Select Operation= </label>
+				<input type="button" id="clear" value="" />
+				<button type="button" id="add" value="+">+</button>
+				<button type="button" id="subtract" value="-">-</button>
+				<button type="button" id="multiply" value="*">*</button>
+				<button type="button" id="divide" value="/">/</button>
+				<br />
+				<button onclick="calculate()" id="submit-button">Submit</button>
+				<br />
+				<br />
+				<label>Output= </label>
+				<input type="text" id="calculated-result" />
 			</div>
 		</div>
 		<script src="js/calculator.js"></script>
